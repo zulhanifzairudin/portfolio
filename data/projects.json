@@ -1,0 +1,73 @@
+[
+  {
+    "slug": "e-commerce-platform",
+    "title": "E-Commerce Platform",
+    "description": "A full-stack e-commerce solution with payment integration and admin dashboard",
+    "longDescription": "A comprehensive e-commerce platform built with modern web technologies. Features include user authentication, product catalog management, shopping cart functionality, secure payment processing, order tracking, and an admin dashboard for managing products, orders, and customers. The platform is fully responsive and optimized for performance.",
+    "image": "/project-ecommerce.jpg",
+    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL", "Stripe"],
+    "githubUrl": "https://github.com/username/ecommerce-platform",
+    "liveUrl": "https://ecommerce-demo.vercel.app",
+    "featured": true
+  },
+  {
+    "slug": "task-management-app",
+    "title": "Task Management App",
+    "description": "A collaborative task management application with real-time updates",
+    "longDescription": "A modern task management application that allows teams to collaborate effectively. Features include real-time updates, drag-and-drop task organization, team member assignment, priority levels, due dates, and project boards. Built with a focus on user experience and performance, with offline support and mobile responsiveness.",
+    "image": "/project-taskmanager.jpg",
+    "technologies": ["React", "TypeScript", "Firebase", "Material-UI", "Redux"],
+    "githubUrl": "https://github.com/username/task-manager",
+    "liveUrl": "https://taskmanager-demo.vercel.app",
+    "featured": true
+  },
+  {
+    "slug": "weather-dashboard",
+    "title": "Weather Dashboard",
+    "description": "A beautiful weather dashboard with forecasts and interactive maps",
+    "longDescription": "An elegant weather dashboard that provides detailed weather information for any location. Features include current conditions, 7-day forecasts, hourly weather updates, interactive weather maps, location search, and weather alerts. The app uses modern APIs to provide accurate and up-to-date weather data with a clean, intuitive interface.",
+    "image": "/project-weather.jpg",
+    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "OpenWeather API", "Chart.js"],
+    "githubUrl": "https://github.com/username/weather-dashboard",
+    "liveUrl": "https://weather-demo.vercel.app",
+    "featured": false
+  },
+  {
+    "slug": "fynecta-landing",
+    "title": "Fynecta Landing",
+    "description": "Converted a static Webflow HTML export into a modern Next.js App Router app",
+    "longDescription": "A Next.js application that migrates a multi-page Webflow HTML export into a modern, maintainable App Router architecture.\n\nThis project transforms static Webflow exports into a fully routed Next.js application while preserving Webflow styling, interactions, and animations. It implements custom HTML normalization to extract and render Webflow <body> content, rewrites internal .html links into Next.js routes, and normalizes asset URLs from Webflow's CDN to local public/ assets.\n\nKey technical work includes:\n\n- Dynamic routing for all Webflow pages using the Next.js App Router\n- HTML processing (body extraction, link rewriting, script stripping)\n- Asset normalization to support locally hosted images and Lottie JSON files\n- Client-side re-initialization of Webflow and IX2 interactions on route changes\n- Manual and automated handling of Lottie animations that Webflow does not re-initialize correctly in SPA navigation\n- Separation of global Webflow runtime logic and per-page animation initialization\n\nBuilt with Next.js App Router, React, TypeScript, Webflow Runtime, and lottie-web, the project demonstrates solving real-world migration problems when converting a no-code Webflow site into a production-ready React application.",
+    "image": "/images/fynecta-landing.jpg",
+    "technologies": ["Next.js", "TypeScript", "React", "Webflow", "Lottie Web"],
+    "githubUrl": "https://github.com/acetrow/fynecta-landing",
+    "featured": true
+  },
+  {
+    "slug": "portfolio-website",
+    "title": "Portfolio Website",
+    "description": "A modern, responsive developer portfolio built with Next.js, featuring dark mode, project filtering, and dynamic project pages",
+    "longDescription": "A personal portfolio website built using Next.js App Router and TypeScript to showcase projects in a clean, professional, and performant way. The site features a modern UI with dark mode support, responsive layouts for all screen sizes, and smooth client-side navigation.\n\nProjects are managed through a structured JSON data source and rendered dynamically, allowing each project to have its own detail page generated via dynamic routing. Users can filter projects by technology stack, making it easy to explore work based on specific skills.\n\nThe application emphasizes performance, maintainability, and type safety, leveraging Next.js 16 features, React 19, and Tailwind CSS for rapid UI development. Dark mode is fully supported with system preference detection and persistent user settings. The project is designed to be easily extensible, allowing new projects to be added with minimal effort.",
+    "image": "/images/portfolio-website.jpg",
+    "technologies": ["Next.js", "TypeScript", "React", "Tailwind CSS"],
+    "featured": true
+  },
+  {
+    "slug": "mobile-puzzle-game-monetization-study",
+    "title": "Mobile Puzzle Game – Monetization Study",
+    "description": "A Unity-based mobile puzzle game designed to study how reward-based monetization impacts player engagement and experience",
+    "longDescription": "A logic-driven mobile puzzle game developed in Unity as part of a formal research study on monetization and player experience. The project consists of two parallel versions of the same game: a non-monetized version with a fixed number of hints, and a monetized version that allows players to earn additional hints by watching optional reward-based video ads.\n\nThe game features 10 progressively challenging puzzle levels, each introducing different interaction mechanics such as drag-and-drop, multi-touch gestures, pinch-to-zoom, rapid input, and text-based logic challenges. Each level is implemented with modular, reusable scripts to support scalability and experimentation.\n\nA persistent hint management system was implemented using the Singleton pattern and DontDestroyOnLoad, ensuring consistent game state across scenes. In the monetized version, hints are replenished only after successful completion of a 17-second unskippable video ad, with validation handled via Unity's VideoPlayer callbacks.\n\nThe project was optimized for mobile-first interaction, focusing on intuitive UX, touch accuracy, and clear feedback. It was used to compare player satisfaction, engagement, and perceived fairness between monetized and non-monetized gameplay experiences.",
+    "image": "/images/mobile-puzzle-game.jpg",
+    "technologies": ["Unity", "C#", "TextMeshPro", "iOS (Unity Remote)"],
+    "featured": true
+  },
+  {
+    "slug": "task-manager",
+    "title": "Task Manager",
+    "description": "A lightweight task management web app built with React and Vite, featuring task CRUD operations, filtering, and local storage persistence",
+    "longDescription": "A simple yet well-structured task management application built using React and Vite, focused on clean state management and user experience. The app allows users to create, edit, complete, and delete tasks, with inline editing for fast interaction.\n\nTasks can be filtered by All, Active, or Completed, making it easy to manage larger task lists. All data is persisted using the browser's localStorage, ensuring tasks remain available across page reloads and browser sessions without requiring a backend.\n\nThe project emphasizes clarity, responsiveness, and performance, leveraging Vite's fast development workflow and React's component-based architecture. It demonstrates practical frontend fundamentals such as controlled inputs, conditional rendering, list rendering with keys, and persistent client-side state.\n\nA live deployment is available to showcase real-world usage and UI behavior.",
+    "image": "/images/task-manager.jpg",
+    "technologies": ["React", "Vite", "JavaScript", "CSS", "Web Storage API (localStorage)"],
+    "featured": false
+  }
+]
+

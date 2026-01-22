@@ -1,9 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Website
+
+A modern, responsive portfolio website built with Next.js 16, featuring a clean design, dark mode support, and a dynamic project showcase with filtering capabilities.
+
+## Features
+
+- 🎨 **Modern UI/UX**: Clean, responsive design with gradient accents and smooth transitions
+- 🌙 **Dark Mode**: Full dark mode support with system preference detection
+- 📱 **Responsive Design**: Optimized for all screen sizes
+- 🔍 **Project Filtering**: Filter projects by technology stack
+- 📄 **Dynamic Project Pages**: Individual detail pages for each project
+- ⚡ **Performance**: Built with Next.js App Router for optimal performance
+- 🎯 **Type-Safe**: Full TypeScript support
+
+## Tech Stack
+
+- **Framework**: Next.js 16.1.1 (App Router)
+- **Language**: TypeScript 5
+- **UI Library**: React 19.2.3
+- **Styling**: Tailwind CSS 4
+- **Fonts**: Geist Sans & Geist Mono (via Next.js)
+
+## Project Structure
+
+```
+portfolio/
+├── app/                    # Next.js App Router
+│   ├── page.tsx           # Home page
+│   ├── layout.tsx         # Root layout with navigation
+│   ├── projects/          # Projects pages
+│   │   ├── page.tsx       # Projects listing with filtering
+│   │   └── [slug]/        # Dynamic project detail pages
+│   └── globals.css        # Global styles
+├── components/            # React components
+│   ├── Navigation.tsx     # Main navigation bar
+│   ├── ProjectCard.tsx    # Project card component
+│   ├── ThemeProvider.tsx  # Dark mode provider
+│   ├── ThemeScript.tsx    # Theme initialization script
+│   └── ThemeToggle.tsx    # Dark mode toggle button
+├── data/                  # Data files
+│   └── projects.json      # Project data
+├── types/                 # TypeScript types
+│   └── project.ts         # Project interface
+└── utils/                 # Utility functions
+    └── techColors.ts      # Technology badge colors
+```
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+ 
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd portfolio
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
@@ -14,23 +82,77 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Adding Projects
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Projects are managed in `data/projects.json`. To add a new project:
 
-## Learn More
+1. Add a new object to the `projects.json` array:
 
-To learn more about Next.js, take a look at the following resources:
+```json
+{
+  "slug": "project-slug",
+  "title": "Project Title",
+  "description": "Short description for the card",
+  "longDescription": "Detailed description with paragraphs and bullet points.\n\nUse \\n for line breaks.",
+  "image": "/images/project-image.jpg",
+  "technologies": ["Next.js", "TypeScript", "React"],
+  "githubUrl": "https://github.com/username/repo",
+  "liveUrl": "https://project-demo.vercel.app",
+  "featured": true
+}
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Add the project image to `public/images/` directory
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. The project will automatically appear on the projects page and have a detail page at `/projects/project-slug`
 
-## Deploy on Vercel
+## Current Projects
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **E-Commerce Platform** - Full-stack e-commerce solution with payment integration
+- **Task Management App** - Collaborative task management with real-time updates
+- **Weather Dashboard** - Beautiful weather dashboard with forecasts and maps
+- **Fynecta Landing** - Converted a static Webflow HTML export into a modern Next.js App Router app
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## Deployment
+
+The easiest way to deploy this portfolio is using [Vercel](https://vercel.com):
+
+1. Push your code to GitHub
+2. Import your repository on Vercel
+3. Vercel will automatically detect Next.js and configure the build settings
+4. Your portfolio will be live!
+
+For more deployment options, see the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
+
+## Customization
+
+### Update Personal Information
+
+Edit `app/page.tsx` to update:
+- Your name
+- Bio/description
+- Tech stack
+- GitHub URL
+
+### Styling
+
+The project uses Tailwind CSS. Customize colors, spacing, and other design tokens in:
+- `app/globals.css` - Global styles and CSS variables
+- Component files - Tailwind classes
+
+### Theme
+
+Dark mode is implemented using a custom theme provider. The theme preference is stored in localStorage and respects system preferences.
+
+## License
+
+This project is private - All rights reserved
