@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Project } from '@/types/project';
@@ -8,17 +10,30 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
+  const isVideo = project.image.endsWith('.mp4');
+
   return (
     <div className="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:border-gray-600">
       <Link href={`/projects/${project.slug}`}>
         <div className="relative h-48 w-full overflow-hidden bg-gray-100 dark:bg-gray-700">
-          <Image
-            src={project.image}
-            alt={project.title}
-            fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
+          {isVideo ? (
+            <video
+              src={project.image}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+          ) : (
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          )}
           {project.featured && (
             <span className="absolute top-3 right-3 rounded-full bg-blue-500 px-2 py-1 text-xs font-semibold text-white">
               Featured

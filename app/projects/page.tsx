@@ -18,14 +18,21 @@ export default function ProjectsPage() {
     return Array.from(techSet).sort();
   }, [projects]);
 
-  // Filter projects based on selected technology
+  // Filter projects based on selected technology and sort with featured first
   const filteredProjects = useMemo(() => {
-    if (selectedTech === 'all') {
-      return projects;
-    }
-    return projects.filter((project) =>
-      project.technologies.includes(selectedTech)
-    );
+    const base =
+      selectedTech === 'all'
+        ? projects
+        : projects.filter((project) =>
+            project.technologies.includes(selectedTech)
+          );
+
+    // Featured projects first, then non-featured (stable within groups)
+    return [...base].sort((a, b) => {
+      const aFeatured = a.featured ? 1 : 0;
+      const bFeatured = b.featured ? 1 : 0;
+      return bFeatured - aFeatured;
+    });
   }, [projects, selectedTech]);
 
   return (
@@ -36,7 +43,9 @@ export default function ProjectsPage() {
             My Projects
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300">
-            A collection of projects I've built using modern technologies
+            A collection of projects showcasing my work with modern technologies
+            <br />
+            and real-world development practices.
           </p>
         </div>
 

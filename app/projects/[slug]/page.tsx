@@ -51,16 +51,27 @@ export default async function ProjectDetailPage({
           Back to Projects
         </Link>
 
-        {/* Project Image */}
+        {/* Project Image/Video */}
         <div className="relative mb-8 h-64 w-full overflow-hidden rounded-lg bg-gray-200 shadow-lg sm:h-96 dark:bg-gray-700">
-          <Image
-            src={project.image}
-            alt={project.title}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 1024px"
-            priority
-          />
+          {project.image.endsWith('.mp4') ? (
+            <video
+              src={project.image}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="h-full w-full object-cover"
+            />
+          ) : (
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 1024px"
+              priority
+            />
+          )}
         </div>
 
         {/* Project Content */}

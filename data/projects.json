@@ -1,73 +1,107 @@
 [
   {
-    "slug": "e-commerce-platform",
-    "title": "E-Commerce Platform",
-    "description": "A full-stack e-commerce solution with payment integration and admin dashboard",
-    "longDescription": "A comprehensive e-commerce platform built with modern web technologies. Features include user authentication, product catalog management, shopping cart functionality, secure payment processing, order tracking, and an admin dashboard for managing products, orders, and customers. The platform is fully responsive and optimized for performance.",
-    "image": "/project-ecommerce.jpg",
-    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL", "Stripe"],
-    "githubUrl": "https://github.com/username/ecommerce-platform",
-    "liveUrl": "https://ecommerce-demo.vercel.app",
-    "featured": true
-  },
-  {
-    "slug": "task-management-app",
-    "title": "Task Management App",
-    "description": "A collaborative task management application with real-time updates",
-    "longDescription": "A modern task management application that allows teams to collaborate effectively. Features include real-time updates, drag-and-drop task organization, team member assignment, priority levels, due dates, and project boards. Built with a focus on user experience and performance, with offline support and mobile responsiveness.",
-    "image": "/project-taskmanager.jpg",
-    "technologies": ["React", "TypeScript", "Firebase", "Material-UI", "Redux"],
-    "githubUrl": "https://github.com/username/task-manager",
-    "liveUrl": "https://taskmanager-demo.vercel.app",
-    "featured": true
-  },
-  {
-    "slug": "weather-dashboard",
-    "title": "Weather Dashboard",
-    "description": "A beautiful weather dashboard with forecasts and interactive maps",
-    "longDescription": "An elegant weather dashboard that provides detailed weather information for any location. Features include current conditions, 7-day forecasts, hourly weather updates, interactive weather maps, location search, and weather alerts. The app uses modern APIs to provide accurate and up-to-date weather data with a clean, intuitive interface.",
-    "image": "/project-weather.jpg",
-    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "OpenWeather API", "Chart.js"],
-    "githubUrl": "https://github.com/username/weather-dashboard",
-    "liveUrl": "https://weather-demo.vercel.app",
-    "featured": false
-  },
-  {
     "slug": "fynecta-landing",
     "title": "Fynecta Landing",
     "description": "Converted a static Webflow HTML export into a modern Next.js App Router app",
     "longDescription": "A Next.js application that migrates a multi-page Webflow HTML export into a modern, maintainable App Router architecture.\n\nThis project transforms static Webflow exports into a fully routed Next.js application while preserving Webflow styling, interactions, and animations. It implements custom HTML normalization to extract and render Webflow <body> content, rewrites internal .html links into Next.js routes, and normalizes asset URLs from Webflow's CDN to local public/ assets.\n\nKey technical work includes:\n\n- Dynamic routing for all Webflow pages using the Next.js App Router\n- HTML processing (body extraction, link rewriting, script stripping)\n- Asset normalization to support locally hosted images and Lottie JSON files\n- Client-side re-initialization of Webflow and IX2 interactions on route changes\n- Manual and automated handling of Lottie animations that Webflow does not re-initialize correctly in SPA navigation\n- Separation of global Webflow runtime logic and per-page animation initialization\n\nBuilt with Next.js App Router, React, TypeScript, Webflow Runtime, and lottie-web, the project demonstrates solving real-world migration problems when converting a no-code Webflow site into a production-ready React application.",
     "image": "/images/fynecta-landing.jpg",
-    "technologies": ["Next.js", "TypeScript", "React", "Webflow", "Lottie Web"],
+    "technologies": ["Next.js", "TypeScript", "React", "Webflow", "Lottie Web", "JavaScript", "HTML & CSS"],
     "githubUrl": "https://github.com/acetrow/fynecta-landing",
     "featured": true
   },
+
+  {
+    "slug": "payroll-management-system",
+    "title": "Payroll Management System (Fullstack .NET + React)",
+    "description": "A full-stack payroll management system built with .NET 8 and React, implementing Clean Architecture, RESTful APIs, and business-rule-driven salary calculations.",
+    "longDescription": "The CDN Payroll System is a production-style payroll management application designed using Clean Architecture principles to ensure maintainability, testability, and clear separation of concerns. It manages employees, working schedules, skills, and salary calculations through a robust backend API and a modern React frontend.\n\nArchitecture & Design\n\nThe backend strictly follows Clean Architecture:\n\n- Domain Layer: Core business entities, value objects, and repository interfaces with zero external dependencies\n- Application Layer: Business logic, services, DTOs, and validation\n- Infrastructure Layer: Data persistence using Dapper and SQL Server\n- API Layer: ASP.NET Core Web API exposing RESTful endpoints with global exception handling\n\nThis design ensures business rules are isolated from frameworks and infrastructure, making the system highly extensible and testable.\n\nKey Features\n\nEmployee Management\n\n- Create, update, delete, archive, and unarchive employees\n- Search employees by keyword\n- Auto-generated employee numbers based on name, date of birth, and randomness\n\nPayroll Calculation\n\n- Calculates salary based on working days within a date range\n- Applies business rules such as daily rate doubling and birthday bonus pay\n- Handles edge cases like birthdays falling on weekends\n\nBusiness Rules Enforcement\n\n- Working day filtering using enums\n- Deterministic salary computation logic\n- Strict validation at the application layer\n\nBackend Quality & Reliability\n\n- Global exception handling middleware with environment-specific error responses\n- Unit tests using xUnit and Moq covering payroll logic and edge cases\n- Swagger/OpenAPI documentation for all endpoints\n\nFrontend Application\n\n- Built with React and Vite\n- Employee listing with search\n- CRUD operations with archive/unarchive support\n- Salary calculation UI\n- Route protection and API integration via Axios\n\nTechnical Highlights\n\n- Clean Architecture with zero Domain dependencies\n- Dapper-based data access (no ORM abstraction leaks)\n- RESTful API design with consistent JSON responses\n- Strong test coverage for business-critical logic\n- Clear separation between business logic and infrastructure concerns\n\nThis project demonstrates enterprise-grade backend design, full-stack integration, and real-world payroll business logic, making it highly relevant for backend, full-stack, and software engineering roles.",
+    "image": "/images/payroll-management-system.jpg",
+    "technologies": ["C#", ".NET", "JavaScript", "ASP.NET", "Dapper", "SQL", "Swagger", "React", "Axios", "HTML & CSS"],
+    "githubUrl": "https://github.com/zulhanifzairudin/payroll-management-system",
+    "featured": true
+  },
+
   {
     "slug": "portfolio-website",
     "title": "Portfolio Website",
     "description": "A modern, responsive developer portfolio built with Next.js, featuring dark mode, project filtering, and dynamic project pages",
-    "longDescription": "A personal portfolio website built using Next.js App Router and TypeScript to showcase projects in a clean, professional, and performant way. The site features a modern UI with dark mode support, responsive layouts for all screen sizes, and smooth client-side navigation.\n\nProjects are managed through a structured JSON data source and rendered dynamically, allowing each project to have its own detail page generated via dynamic routing. Users can filter projects by technology stack, making it easy to explore work based on specific skills.\n\nThe application emphasizes performance, maintainability, and type safety, leveraging Next.js 16 features, React 19, and Tailwind CSS for rapid UI development. Dark mode is fully supported with system preference detection and persistent user settings. The project is designed to be easily extensible, allowing new projects to be added with minimal effort.",
-    "image": "/images/portfolio-website.jpg",
-    "technologies": ["Next.js", "TypeScript", "React", "Tailwind CSS"],
+    "longDescription": "A personal portfolio website built using Next.js App Router and TypeScript to showcase projects in a clean, professional, and performant way. The site features:\n\n- Modern UI with dark mode support\n- Responsive layouts for all screen sizes\n- Smooth client-side navigation\n\nProjects are managed through a structured JSON data source and rendered dynamically, allowing each project to have its own detail page generated via dynamic routing. Users can filter projects by technology stack, making it easy to explore work based on specific skills.\n\nThe application emphasizes performance, maintainability, and type safety, leveraging Next.js 16 features, React 19, and Tailwind CSS for rapid UI development. Dark mode is fully supported with system preference detection and persistent user settings. The project is designed to be easily extensible, allowing new projects to be added with minimal effort.",
+    "image": "/images/portfolio.jpg",
+    "technologies": ["Next.js", "TypeScript", "React", "Tailwind CSS", "JavaScript", "HTML & CSS"],
+    "githubUrl": "https://github.com/zulhanifzairudin/portfolio",
     "featured": true
   },
   {
     "slug": "mobile-puzzle-game-monetization-study",
     "title": "Mobile Puzzle Game – Monetization Study",
     "description": "A Unity-based mobile puzzle game designed to study how reward-based monetization impacts player engagement and experience",
-    "longDescription": "A logic-driven mobile puzzle game developed in Unity as part of a formal research study on monetization and player experience. The project consists of two parallel versions of the same game: a non-monetized version with a fixed number of hints, and a monetized version that allows players to earn additional hints by watching optional reward-based video ads.\n\nThe game features 10 progressively challenging puzzle levels, each introducing different interaction mechanics such as drag-and-drop, multi-touch gestures, pinch-to-zoom, rapid input, and text-based logic challenges. Each level is implemented with modular, reusable scripts to support scalability and experimentation.\n\nA persistent hint management system was implemented using the Singleton pattern and DontDestroyOnLoad, ensuring consistent game state across scenes. In the monetized version, hints are replenished only after successful completion of a 17-second unskippable video ad, with validation handled via Unity's VideoPlayer callbacks.\n\nThe project was optimized for mobile-first interaction, focusing on intuitive UX, touch accuracy, and clear feedback. It was used to compare player satisfaction, engagement, and perceived fairness between monetized and non-monetized gameplay experiences.",
-    "image": "/images/mobile-puzzle-game.jpg",
+    "longDescription": "A logic-driven mobile puzzle game developed in Unity as part of a formal research study on monetization and player experience. The project consists of two parallel versions of the same game: a non-monetized version with a fixed number of hints, and a monetized version that allows players to earn additional hints by watching optional reward-based video ads.\n\nThe game features 10 progressively challenging puzzle levels, each introducing different interaction mechanics:\n\n- Drag-and-drop\n- Multi-touch gestures\n- Pinch-to-zoom\n- Rapid input\n- Text-based logic challenges\n\nEach level is implemented with modular, reusable scripts to support scalability and experimentation.\n\nA persistent hint management system was implemented using the Singleton pattern and DontDestroyOnLoad, ensuring consistent game state across scenes. In the monetized version, hints are replenished only after successful completion of a 17-second unskippable video ad, with validation handled via Unity's VideoPlayer callbacks.\n\nThe project was optimized for mobile-first interaction, focusing on intuitive UX, touch accuracy, and clear feedback. It was used to compare player satisfaction, engagement, and perceived fairness between monetized and non-monetized gameplay experiences.",
+    "image": "/images/puzzle-game2.jpg",
     "technologies": ["Unity", "C#", "TextMeshPro", "iOS (Unity Remote)"],
+    "githubUrl": "https://github.com/zulhanifzairudin/EyeQ-game#",
     "featured": true
   },
   {
     "slug": "task-manager",
     "title": "Task Manager",
     "description": "A lightweight task management web app built with React and Vite, featuring task CRUD operations, filtering, and local storage persistence",
-    "longDescription": "A simple yet well-structured task management application built using React and Vite, focused on clean state management and user experience. The app allows users to create, edit, complete, and delete tasks, with inline editing for fast interaction.\n\nTasks can be filtered by All, Active, or Completed, making it easy to manage larger task lists. All data is persisted using the browser's localStorage, ensuring tasks remain available across page reloads and browser sessions without requiring a backend.\n\nThe project emphasizes clarity, responsiveness, and performance, leveraging Vite's fast development workflow and React's component-based architecture. It demonstrates practical frontend fundamentals such as controlled inputs, conditional rendering, list rendering with keys, and persistent client-side state.\n\nA live deployment is available to showcase real-world usage and UI behavior.",
+    "longDescription": "A simple yet well-structured task management application built using React and Vite, focused on clean state management and user experience. The app allows users to create, edit, complete, and delete tasks, with inline editing for fast interaction.\n\nTasks can be filtered by All, Active, or Completed, making it easy to manage larger task lists. All data is persisted using the browser's localStorage, ensuring tasks remain available across page reloads and browser sessions without requiring a backend.\n\nThe project emphasizes clarity, responsiveness, and performance, leveraging Vite's fast development workflow and React's component-based architecture. It demonstrates practical frontend fundamentals:\n\n- Controlled inputs\n- Conditional rendering\n- List rendering with keys\n- Persistent client-side state\n\nA live deployment is available to showcase real-world usage and UI behavior.",
     "image": "/images/task-manager.jpg",
-    "technologies": ["React", "Vite", "JavaScript", "CSS", "Web Storage API (localStorage)"],
+    "technologies": ["React", "Vite", "JavaScript", "HTML & CSS"],
+    "githubUrl": "https://github.com/zulhanifzairudin/task-manager",
+    "liveUrl": "https://task-manager-ofm4x5rff-zulhanifs-projects.vercel.app/",
+    "featured": true
+  },
+  {
+    "slug": "bombsweeper",
+    "title": "Minesweeper Game (BombSweeper)",
+    "description": "A fully functional Minesweeper clone built in Java with a graphical interface, showcasing object-oriented design, recursive algorithms, and event-driven programming",
+    "longDescription": "BombSweeper is a desktop-based Minesweeper clone developed in Java, designed to demonstrate strong fundamentals in object-oriented programming, recursion, and GUI development. The game faithfully recreates classic Minesweeper mechanics:\n\n- Bomb detection\n- Numbered hints\n- Automatic flood-fill revealing of empty spaces\n\nThe application uses a 50×50 interactive grid (2,500 clickable squares) implemented with Java Swing, where each square responds to user input through an event-driven architecture. A recursive flood-fill algorithm is used to automatically reveal connected safe areas when a square with zero adjacent bombs is clicked, requiring careful state tracking to prevent infinite recursion.\n\nThe project emphasizes clean architecture and separation of concerns. An abstract base class defines common behavior for grid squares, while concrete implementations handle bomb logic and recursive reveal behavior. The grid itself is managed independently by a board controller, making the system scalable and easy to extend with features such as flags, timers, or difficulty levels.\n\nThis project highlights practical problem-solving with algorithms, real-world use of recursion, and clean OOP design patterns in a graphical application.",
+    "image": "/images/bombsweeper.jpg",
+    "technologies": ["Java", "Java Swing", "Object-Oriented Programming"],
+    "githubUrl": "https://github.com/zulhanifzairudin/bombsweeper",
+    "featured": false
+  },
+  {
+    "slug": "solar-system-simulation",
+    "title": "Solar System Simulation",
+    "description": "A real-time 2D solar system simulation in Java demonstrating object-oriented design, animation, and graphical rendering with realistic orbital mechanics",
+    "longDescription": "This project is a Java-based 2D solar system simulation designed to showcase object-oriented programming, graphical rendering, and animation fundamentals. The simulation includes:\n\n- The Sun\n- 9 planets\n- 4 moons\n- A procedurally generated asteroid belt\n\nAll moving in real-time with accurate orbital mechanics.\n\nThe system is built with a clean OOP architecture, featuring a base Sun class and derived classes for Planet, Moon, and Asteroid. Different planet types (standard vs. faster rotation) are handled by separate classes rather than conditional logic, demonstrating polymorphism and extensibility.\n\nThe simulation runs at 50 FPS, using a custom animation loop with thread-safe rendering. Orbital positions are calculated with polar-to-Cartesian transformations, enabling nested orbits for moons and visually smooth animations for planets, moons, and asteroid belts. Visual polish includes:\n\n- Double-buffering\n- Anti-aliasing\n- Layered rendering (e.g., Saturn's rings and sun flare effects)\n\nThis project emphasizes mathematical modeling, real-time graphics, and performance-aware object management, providing experience transferable to game development, UI animations, and front-end visualization.",
+    "image": "/images/solar-system-simulation.mp4",
+    "technologies": ["Java", "Java Swing", "Object-Oriented Programming"],
+    "githubUrl": "https://github.com/zulhanifzairudin/Solar-System",
+    "featured": false
+  },
+  {
+    "slug": "airhockey",
+    "title": "Air Hockey",
+    "description": "A two-player Air Hockey game in Java featuring keyboard controls, sound effects, and dynamic gameplay with goal scoring and cheat-code mallet adjustments",
+    "longDescription": "This Java project recreates the classic Air Hockey game for two players. Each player controls a mallet on opposite sides of the table and aims to score 7 goals before their opponent. The game features:\n\n- Keyboard controls for movement\n- Sound effects for collisions and goals\n- Cheat codes to dynamically adjust mallet sizes\n\nThe gameplay is handled with object-oriented design, including classes for the Ball, Mallets, Game Arena, and supporting elements like Lines, Rectangles, Text, and Sound. The project includes JavaDoc documentation for all classes, making it easy to understand the structure and behavior of the code.\n\nPlayers can also mute/unmute sounds during gameplay and enjoy a responsive, interactive experience that simulates the physics of a real air hockey table. The project demonstrates:\n\n- Java Swing/Graphics programming\n- Event-driven architecture\n- Collision detection\n- Basic game physics",
+    "image": "/images/airhockey.mp4",
+    "technologies": ["Java", "Java Swing", "Object-Oriented Programming", "2D Graphics"],
+    "githubUrl": "https://github.com/zulhanifzairudin/airhockey",
+    "featured": false
+  },
+  {
+    "slug": "network-applications-suite",
+    "title": "Network Applications Suite",
+    "description": "A Python-based suite of network tools including ICMP Ping, Traceroute, HTTP Web Server, and HTTP Proxy Server, built from scratch to demonstrate socket programming, concurrency, and protocol-level understanding",
+    "longDescription": "This project implements a comprehensive suite of core network applications in Python using raw sockets and threading, without relying on external libraries. It showcases a practical understanding of networking protocols, packet-level operations, and low-level system programming.\n\nThe suite includes:\n\n- ICMP Ping Client: Sends Echo Requests, measures RTT, detects packet loss, and parses replies\n- Traceroute Client: Discovers network paths via TTL manipulation, supports ICMP and UDP, measures hop-by-hop latency, and resolves hostnames\n- HTTP Web Server: Multi-threaded HTTP/1.1 server serving static files, handling GET requests, and supporting concurrent connections\n- HTTP Proxy Server: Forwards requests/responses, implements caching with metadata management, and differentiates cache hits/misses\n\nThis project emphasizes robust, protocol-compliant implementations and demonstrates hands-on experience with network timing, concurrency, error handling, and packet inspection. It was developed as part of coursework in Computer Networks at Lancaster University.",
+    "image": "/images/networking.jpg",
+    "technologies": ["Python 3",  "HTTP Protocol"],
+    "githubUrl": "https://github.com/zulhanifzairudin/networking",
+    "featured": false
+  },
+  {
+    "slug": "book-library-management-system",
+    "title": "Book Library Management System",
+    "description": "A PHP and MySQL web application for managing a library database, featuring full CRUD operations, responsive design, and robust server-side validation",
+    "longDescription": "This project is a database-driven library management system built with PHP, MySQL, HTML, and CSS, demonstrating full-stack web development with secure, validated data handling. The application allows users to add, view, update, and delete books with immediate feedback and real-time validation.\n\nKey Features:\n\nDatabase Operations:\n\n- Add Books: Enter ID, title, author, genre, and publication year with duplicate ID detection and field validation\n- View Books: Display all entries in a formatted, responsive HTML table with alternating row colors and hover effects\n- Edit Books: Update selected fields while leaving others unchanged; validates existence and field formats\n- Delete Books: Remove books safely with validation and success/error feedback\n\nData Validation:\n\n- ID: Numeric, ≤3 digits, duplicate/existence checks\n- Title: Required, ≤20 characters, sanitized input\n- Author: Required, ≤30 characters, non-numeric\n- Genre: Required, ≤30 characters\n- Year: Numeric, 1400–2023\n\nUser Interface:\n\n- Horizontal navigation menu with hover effects\n- Styled tables with green headers, striped rows, and responsive width\n- Form inputs with consistent styling, rounded corners, and error/success messages\n\nTechnical Implementation:\n\n- Server-side validation and sanitization to prevent SQL injection\n- Real-time database feedback for all CRUD operations\n- Structured project files separating pages, styles, and database logic\n\nThis project demonstrates practical skills in PHP, MySQL, server-side validation, and responsive frontend design, suitable for real-world CRUD-based applications.",
+    "image": "/images/book-management.jpg",
+    "technologies": ["PHP", "MySQL", "HTML & CSS", "Apache"],
+    "githubUrl": "https://github.com/zulhanifzairudin/book-management-website",
     "featured": false
   }
+
 ]
 
