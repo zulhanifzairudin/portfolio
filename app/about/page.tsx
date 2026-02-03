@@ -125,7 +125,7 @@ export default function AboutPage() {
             <div>
               <div className="mb-2 flex flex-col sm:flex-row sm:items-center sm:justify-between">
                 <h3 className="text-xl font-semibold text-white">Technology Consultant Intern</h3>
-                <span className="text-sm text-gray-400">September 2025 - Present</span>
+                <span className="text-sm text-gray-400">July 2024 - August 2024</span>
               </div>
               <p className="mb-3 text-gray-300">Ernst and Young, Kuala Lumpur, Malaysia</p>
               <ul className="ml-6 list-disc space-y-2 text-gray-400">
